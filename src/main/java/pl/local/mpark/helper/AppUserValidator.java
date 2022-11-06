@@ -20,7 +20,7 @@ public class AppUserValidator implements Validator {
     public void validate(Object o, Errors errors) {
         ValidationUtils.rejectIfEmptyOrWhitespace(errors, "firstName", "validation.firstNameRequired");
         ValidationUtils.rejectIfEmptyOrWhitespace(errors, "lastName", "validation.lastNameRequired");
-        ValidationUtils.rejectIfEmptyOrWhitespace(errors, "email", "validation.emailNameRequired");
+        ValidationUtils.rejectIfEmptyOrWhitespace(errors, "email", "validation.emailRequired");
         ValidationUtils.rejectIfEmptyOrWhitespace(errors, "telephoneNumber", "validation.telephoneNumberRequired");
 
         if(errors.getErrorCount() == 0) {
