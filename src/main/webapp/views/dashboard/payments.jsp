@@ -18,6 +18,13 @@
 </div>
 <div class="ui vertical segment">
     <div class="ui container">
+        <div class="ui indicating progress" data-value="${payments.stream().filter(e->e.isPaid()).count()}"
+             data-total="${payments.size()}" id="progresindicator">
+            <div class="bar">
+                <div class="progress"></div>
+            </div>
+            <div class="label">${payments.stream().filter(e->e.isPaid()).count()} of ${payments.size()} paid!</div>
+        </div>
         <h2 class="header"><spring:message code="dashboard.payments.title"/></h2>
         <table class="ui sortable celled table">
             <thead>
