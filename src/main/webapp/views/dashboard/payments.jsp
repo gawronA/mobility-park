@@ -19,7 +19,7 @@
 <div class="ui vertical segment">
     <div class="ui container">
         <h2 class="header"><spring:message code="dashboard.payments.title"/></h2>
-        <table class="ui striped celled table">
+        <table class="ui sortable celled table">
             <thead>
             <tr>
                 <th><spring:message code="user"/></th>

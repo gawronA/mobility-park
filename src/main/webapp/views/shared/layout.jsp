@@ -36,6 +36,7 @@
 <script src="<c:url value="/resources/semantic/semantic.min.js"/>"></script>
 <script src="<c:url value="/resources/semantic/Semantic-UI-Alert.js"/>"></script>
 <script src="<c:url value="/resources/scripts/site.js"/>"></script>
+<script src="<c:url value="/resources/scripts/tablesort.js"/>"></script>
 <tiles:insertAttribute name="scripts"/>
 </body>
 </html>
