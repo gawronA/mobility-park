@@ -1,0 +1,57 @@
+classDiagram
+direction BT
+class appuser {
+   bool active
+   varchar(255) email
+   varchar(255) firstname
+   varchar(255) lastname
+   varchar(255) password
+   varchar(255) telephonenumber
+   varchar(255) username
+   int8 card_id
+   int8 subscription_id
+   int8 id
+}
+class appuser_appuserrole {
+   int8 appuser_id
+   int8 appuserroles_id
+}
+class appuserrole {
+   varchar(255) role
+   int8 id
+}
+class booking {
+   bool accepted
+   timestamp(6) fromtime
+   timestamp(6) totime
+   int8 appuser_id
+   int8 id
+}
+class payment {
+   float8 amount
+   varchar(255) name
+   bool paid
+   int8 appuser_id
+   int8 id
+}
+class subscription {
+   float8 baseprice
+   float8 bookingprice
+   float8 hourprice
+   varchar(255) name
+   int8 id
+}
+class usercard {
+   bool active
+   varchar(255) number
+   int8 appuser_id
+   int8 id
+}
+
+appuser  -->  subscription : subscription_id:id
+appuser  -->  usercard : card_id:id
+appuser_appuserrole  -->  appuser : appuser_id:id
+appuser_appuserrole  -->  appuserrole : appuserroles_id:id
+booking  -->  appuser : appuser_id:id
+payment  -->  appuser : appuser_id:id
+usercard  -->  appuser : appuser_id:id
